@@ -1132,6 +1132,30 @@ files = [
 ]
 
 [[package]]
+name = "lightgbm"
+version = "3.3.5"
+description = "LightGBM Python Package"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "lightgbm-3.3.5-py3-none-macosx_10_15_x86_64.macosx_11_6_x86_64.macosx_12_0_x86_64.whl", hash = "sha256:843dd37c00a1096a8898b80e368b3eef7f5a5d327d1fd9eb770b6f3c2e1edc49"},
+    {file = "lightgbm-3.3.5-py3-none-manylinux1_x86_64.whl", hash = "sha256:044f65664c1a32c98cb619bafa97d8cd9d93c2c2d5053376aadfe509a3a3e7fa"},
+    {file = "lightgbm-3.3.5-py3-none-manylinux2014_aarch64.whl", hash = "sha256:ef01e46939293a0a36729350a7384dc17a36880176d0f17d82b738bbe77e4528"},
+    {file = "lightgbm-3.3.5-py3-none-win_amd64.whl", hash = "sha256:02a40745c1972cf4a2cde764c7739228f45178c2237af2df40fde7063a58ac6a"},
+    {file = "lightgbm-3.3.5.tar.gz", hash = "sha256:10b8fbdcf851e4f68a1f02f38d99bdc44c7c7fb9b1a62dcf924a0d29ff73395c"},
+]
+
+[package.dependencies]
+numpy = "*"
+scikit-learn = "!=0.22.0"
+scipy = "*"
+wheel = "*"
+
+[package.extras]
+dask = ["dask[array] (>=2.0.0)", "dask[dataframe] (>=2.0.0)", "dask[distributed] (>=2.0.0)", "pandas"]
+
+[[package]]
 name = "markupsafe"
 version = "2.1.1"
 description = "Safely add untrusted strings to HTML/XML markup."
@@ -2515,7 +2539,50 @@ docs = ["Sphinx (>=3.4)", "sphinx-rtd-theme (>=0.5)"]
 optional = ["python-socks", "wsaccel"]
 test = ["websockets"]
 
+[[package]]
+name = "wheel"
+version = "0.38.4"
+description = "A built-package format for Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "wheel-0.38.4-py3-none-any.whl", hash = "sha256:b60533f3f5d530e971d6737ca6d58681ee434818fab630c83a734bb10c083ce8"},
+    {file = "wheel-0.38.4.tar.gz", hash = "sha256:965f5259b566725405b05e7cf774052044b1ed30119b5d586b2703aafe8719ac"},
+]
+
+[package.extras]
+test = ["pytest (>=3.0.0)"]
+
+[[package]]
+name = "xgboost"
+version = "1.7.3"
+description = "XGBoost Python Package"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "xgboost-1.7.3-py3-none-macosx_10_15_x86_64.macosx_11_0_x86_64.macosx_12_0_x86_64.whl", hash = "sha256:4a8985b2a874bd65b31869c325bb80051a2c28cedc16805928e2dcfb55fa25ce"},
+    {file = "xgboost-1.7.3-py3-none-macosx_12_0_arm64.whl", hash = "sha256:86dfc7d7da6fae751dc5c316e862f3395d9eddef5d10622a43d47deceb3257df"},
+    {file = "xgboost-1.7.3-py3-none-manylinux2014_aarch64.whl", hash = "sha256:457fa32b39b8bfa8a94eea6b932cb4d945c7a41fcd26e69a1f1dd843179eaccc"},
+    {file = "xgboost-1.7.3-py3-none-manylinux2014_x86_64.whl", hash = "sha256:fab7aeb508f0dbbd4dc7a4569a80ed07632bca3bd91b5490d043d4a33b138a39"},
+    {file = "xgboost-1.7.3-py3-none-win_amd64.whl", hash = "sha256:719e13ac9246b297fb93dd4ee772947f6ec693c46f1adb8cdeb3d3e98e5c08fb"},
+    {file = "xgboost-1.7.3.tar.gz", hash = "sha256:d1ee270b67e8fc5b90002e17493d1c910ae6abe856e6d0d86c619c0002e7c7d1"},
+]
+
+[package.dependencies]
+numpy = "*"
+scipy = "*"
+
+[package.extras]
+dask = ["dask", "distributed", "pandas"]
+datatable = ["datatable"]
+pandas = ["pandas"]
+plotting = ["graphviz", "matplotlib"]
+pyspark = ["cloudpickle", "pyspark", "scikit-learn"]
+scikit-learn = ["scikit-learn"]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "1537d17d37e312210c72f4873dded6bb49b130b3dce51192757fc7a2d088706e"
+content-hash = "b5f9f8191a42d0250459f754c2a4943f4bd3457916bd8c37ccce76418e4dd391"
